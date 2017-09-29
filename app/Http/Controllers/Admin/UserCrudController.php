@@ -110,11 +110,6 @@ class UserCrudController extends CrudController
                 'type'  => 'text',
             ],
             [
-                'name'  => 'SnP',
-                'label' => trans('backpack::permissionmanager.SnP'),
-                'type' => 'browse'
-            ],
-            [
                 'name'  => 'seperator1',
                 'value' => "<hr><h4>Address</h4>",
                 'type'  => 'custom_html',

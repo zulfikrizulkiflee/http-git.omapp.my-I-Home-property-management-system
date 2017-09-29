@@ -38,7 +38,7 @@ class Block extends Model
     |--------------------------------------------------------------------------
     */
     public function properties(){
-      return $this->belongsTo(Models\Properties::class);
+      return $this->belongsTo(Properties::class);
     }
 
     /*

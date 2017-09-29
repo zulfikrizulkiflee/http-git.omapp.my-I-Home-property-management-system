@@ -31,7 +31,6 @@ $factory->define(App\Models\UserProfile::class, function (Faker\Generator $faker
         'emergency_contact_name' => str_random(10),
         'emergency_contact_relationship' => str_random(10),
         'emergency_contact_no' => str_random(10),
-        'SnP' => str_random(10),
         'street' => $faker->streetAddress,
         'city' => $faker->city,
         'state' => $faker->state,

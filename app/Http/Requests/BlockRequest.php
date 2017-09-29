@@ -25,7 +25,7 @@ class BlockRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     public function rules()
     {
       $rules = [
-          'properties_id'    => 'required|unique:properties,id',
+          'properties_id'    => 'required',
           'name' => 'required|unique:blocks,name',
       ];
       return $rules;

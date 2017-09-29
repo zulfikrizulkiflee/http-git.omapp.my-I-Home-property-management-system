@@ -21,7 +21,7 @@ class BlockCrudController extends CrudController
         $this->crud->setModel('App\Models\Block');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/block');
         $this->crud->setEntityNameStrings('block', 'blocks');
-
+        $this->crud->with('properties');
 
         /*
         |--------------------------------------------------------------------------
@@ -33,17 +33,29 @@ class BlockCrudController extends CrudController
         $this->crud->setColumns([
             [
                 'name'  => 'properties_id',
+                'entity' => 'properties',
+                'attribute' => 'name',
                 'label' => trans('ihome.property'),
-                'type'  => 'text',
+                'type'  => 'select',
+                'model'  => '\App\Models\Properties',
             ],
+        ]);
+
+        $this->crud->addColumn([
+          'name'  => 'name',
+          'label' => trans('ihome.name'),
+          'type'  => 'text',
+
         ]);
 
         $this->crud->addFields([
           [ // select_from_array
               'name' => 'properties_id',
               'label' => "Property",
-              'type' => 'select2_from_array',
-              'options' => \App\Models\Properties::all()->pluck('name','id'),
+              'entity' => 'properties',
+              'attribute' => 'name',
+              'type' => 'select2',
+              'model'  => '\App\Models\Properties',
               'allows_null' => false,
               // 'allows_multiple' => true, // OPTIONAL; needs you to cast this to array in your model;
           ],
