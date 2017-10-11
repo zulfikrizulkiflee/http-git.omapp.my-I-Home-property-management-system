@@ -34,6 +34,7 @@ class Properties extends Model
     // protected $guarded = ['id'];
      protected $fillable = [
        'name',
+       'image',
        'street',
        'city',
        'state',

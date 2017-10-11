@@ -40,8 +40,13 @@ class PropertiesCrudController extends CrudController
         $this->crud->addFields([
           [
               'name'  => 'name',
-              'label' => trans('backpack::permissionmanager.name'),
+              'label' => trans('Ihome.name'),
               'type'  => 'text',
+          ],
+          [
+              'name'  => 'image',
+              'label' => trans('Ihome.image'),
+              'type'  => 'browse',
           ],
           [
               'name'  => 'seperator1',

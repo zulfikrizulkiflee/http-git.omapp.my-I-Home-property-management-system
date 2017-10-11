@@ -51,6 +51,7 @@ return [
     'level'                 => 'Level',
     'square_feet'           => 'Square Feet',
     'snp'                   => 'S & P',
+    'image'                 => 'Image',
 
 
 ];
