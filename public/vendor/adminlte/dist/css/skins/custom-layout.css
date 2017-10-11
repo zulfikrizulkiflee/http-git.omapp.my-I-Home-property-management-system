@@ -1,0 +1,47 @@
+.main-header .navbar{
+    background: #F44336 !important;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.main-header .logo{
+    background: #F44336 !important;
+}
+
+.main-header .sidebar-toggle:hover{
+    background: #F44336 !important;
+}
+
+.search-group{
+    left: 0;
+    right:0;
+    position: absolute;
+    height: 100%;
+}
+
+.search-input{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+    border: 1px solid white;
+}
+
+.search-input:focus{
+    border-color: white;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.search-group .input-group-addon{
+    border-color: white !important;
+}
+
+.search-group .search-cancel{
+    position: absolute;
+    right: 0;
+    z-index: 999;
+    padding: 18px;
+}
+
+.search-cancel{
+    cursor: pointer;
+}
