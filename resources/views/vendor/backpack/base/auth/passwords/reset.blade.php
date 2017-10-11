@@ -1,5 +1,5 @@
 @extends('backpack::layout')
-
+<link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/skins/custom.css">
 @section('content')
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

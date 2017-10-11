@@ -1,9 +1,9 @@
 @extends('backpack::layout')
-
+<link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/skins/custom.css">
 <!-- Main Content -->
 @section('content')
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 vertical-center">
             <div class="box box-default">
                 <div class="box-header with-border">
                     <div class="box-title">{{ trans('backpack::base.reset_password') }}</div>
@@ -37,6 +37,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-envelope"></i> {{ trans('backpack::base.send_reset_link') }}
                                 </button>
+                                <a class="btn btn-link" href="{{ url(config('backpack.base.route_prefix', 'admin').'/login') }}">
+                                    <button type="button" class="btn btn-danger">{{ trans('backpack::base.cancel') }}</button>
+                                </a>
                             </div>
                         </div>
                     </form>
