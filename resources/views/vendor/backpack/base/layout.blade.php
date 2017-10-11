@@ -141,6 +141,7 @@
     @include('backpack::inc.alerts')
 
     @yield('after_scripts')
+    @yield('custom_scripts')
 
     <!-- JavaScripts -->
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}

@@ -28,7 +28,59 @@ class PropertiesCrudController extends CrudController
         |--------------------------------------------------------------------------
         */
 
-        $this->crud->setFromDb();
+        $this->crud->setColumns([
+            [
+                'name'  => 'name',
+                'label' => trans('backpack::permissionmanager.name'),
+                'type'  => 'text',
+            ],
+        ]);
+
+        //$this->crud->setFromDb();
+        $this->crud->addFields([
+          [
+              'name'  => 'name',
+              'label' => trans('backpack::permissionmanager.name'),
+              'type'  => 'text',
+          ],
+          [
+              'name'  => 'seperator1',
+              'value' => "<hr><h4>Address</h4>",
+              'type'  => 'custom_html',
+          ],
+          [
+              'name'  => 'location',
+              'label' => trans('backpack::permissionmanager.location'),
+              'type'  => 'address',
+              'store_as_json' => true,
+          ],
+          [
+              'name'  => 'street',
+              'label' => trans('backpack::permissionmanager.street'),
+              'type'  => 'text',
+          ],
+          [
+              'name'  => 'city',
+              'label' => trans('backpack::permissionmanager.city'),
+              'type'  => 'text',
+          ],
+          [
+              'name'  => 'state',
+              'label' => trans('backpack::permissionmanager.state'),
+              'type'  => 'text',
+          ],
+          [
+              'name'  => 'country',
+              'label' => trans('backpack::permissionmanager.country'),
+              'type'  => 'text',
+          ],
+          [
+              'name'  => 'zip',
+              'label' => trans('backpack::permissionmanager.zip'),
+              'type'  => 'text',
+          ],
+        ]);
+
     }
 
     public function store(StoreRequest $request)

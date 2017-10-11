@@ -43,7 +43,14 @@ return [
     'user_role_permission'  => 'User Role Permissions',
     'user'                  => 'User',
     'users'                 => 'Users',
+    'active'                => 'Active',
+    'terminated'            => 'Terminated',
     //property Management
     'property'              => 'Property',
+    'block'                 => 'Block',
+    'level'                 => 'Level',
+    'square_feet'           => 'Square Feet',
+    'snp'                   => 'S & P',
+
 
 ];

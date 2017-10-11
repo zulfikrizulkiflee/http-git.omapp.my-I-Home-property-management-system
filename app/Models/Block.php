@@ -41,6 +41,10 @@ class Block extends Model
       return $this->belongsTo(Properties::class);
     }
 
+    public function unit(){
+      return $this->hasMany(Unit::class);
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

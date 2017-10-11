@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBlocksTable extends Migration
+class CreateUnitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateBlocksTable extends Migration
      */
     public function up()
     {
-        Schema::create('blocks', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('properties_id');
-            $table->string('name');
-            $table->unique(['properties_id', 'name']);
-            $table->timestamps();
+        Schema::create('units', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('block_id');
+          $table->string('name');
+          $table->string('level');
+          $table->string('square_feet');
+          $table->timestamps();
         });
     }
 
@@ -29,6 +30,6 @@ class CreateBlocksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blocks');
+        Schema::dropIfExists('units');
     }
 }

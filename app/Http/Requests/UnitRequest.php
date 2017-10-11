@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use App\Http\Requests\Request;
 use Illuminate\Validation\Rule;
 
-class BlockRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
+class UnitRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,15 +23,18 @@ class BlockRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
      *
      * @return array
      */
-    public function rules()
-    {
-      $rules = [
-          'properties_id'    => 'required',
-          'name' => ['required',
-          Rule::unique('blocks')->where('properties_id', $this->properties_id)],
-      ];
-      return $rules;
-    }
+     public function rules()
+     {
+        $rules = [
+            'name' => ['required',
+            Rule::unique('units')->where('block_id', $this->block_id)],
+            'block_id' => 'required',
+            'level' => 'required',
+            'square_feet' => 'required',
+        ];
+
+        return $rules;
+     }
 
     /**
      * Get the validation attributes that apply to the request.

@@ -3,24 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Builder;
 use Backpack\CRUD\CrudTrait;
 
-class Properties extends Model
+class Unit extends Model
 {
     use CrudTrait;
-    /*
-    protected static function boot()
-    {
-        parent::boot();
-
-        static::addGlobalScope('filter', function (Builder $builder) {
-            if(!auth()->user()->hasRole('superadmin'))
-            {
-              $builder->where('user_id', auth()->user()->id);
-            }
-        });
-    }*/
 
      /*
     |--------------------------------------------------------------------------
@@ -28,19 +15,20 @@ class Properties extends Model
     |--------------------------------------------------------------------------
     */
 
-    //protected $table = 'propertiess';
+    //protected $table = 'units';
     //protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-     protected $fillable = [
-       'name',
-       'street',
-       'city',
-       'state',
-       'country',
-       'zip',
+    protected $fillable = [
+      'block_id',
+      'name',
+      'level',
+      'square_feet',
     ];
-    // protected $hidden = [];
+
+    /*protected $hidden = [
+        'property_id',
+    ];*/
     // protected $dates = [];
 
     /*
@@ -54,12 +42,13 @@ class Properties extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function blocks(){
-      return $this->hasMany(Block::class);
+    public function property()
+    {
+        return $this->block->property();
     }
 
     public function block(){
-      return $this->hasOne(Block::class);
+      return $this->belongsTo(Block::class);
     }
 
     /*
@@ -67,10 +56,7 @@ class Properties extends Model
     | SCOPES
     |--------------------------------------------------------------------------
     */
-    public function scopeUser($query)
-    {
-        return $query->where('id', 1);
-    }
+
     /*
     |--------------------------------------------------------------------------
     | ACCESORS

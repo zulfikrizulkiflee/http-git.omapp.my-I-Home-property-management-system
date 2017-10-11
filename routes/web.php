@@ -19,4 +19,10 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
 	CRUD::resource('user', 'UserCrudController');
   CRUD::resource('properties', 'PropertiesCrudController');
   CRUD::resource('block', 'BlockCrudController');
+  CRUD::resource('unit', 'UnitCrudController');
+
+  //to return all the block within this property
+  Route::get('unit/block_with_property_id/{property_id}', function ($property_id) {
+      return \App\Models\Block::where('properties_id', $property_id)->paginate();
+  });
 });

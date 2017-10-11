@@ -159,7 +159,7 @@ class UserCrudController extends CrudController
               'name' => 'status',
               'label' => trans('backpack::permissionmanager.status'),
               'type' => 'select_from_array',
-              'options' => ['1' => 'Active', '0' => 'Inactive'],
+              'options' => ['1' => trans('ihome.active'), '0' => trans('ihome.terminated')],
               'default'    => '1',
               'allows_null' => false,
             ],
