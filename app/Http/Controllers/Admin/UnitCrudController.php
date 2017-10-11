@@ -95,16 +95,25 @@ class UnitCrudController extends CrudController
               'name'  => 'name',
               'label' => trans('backpack::permissionmanager.name'),
               'type'  => 'text',
+              'attributes' => [
+                'required' => 'required',
+              ]
           ],
           [
               'name'  => 'level',
               'label' => trans('ihome.level'),
               'type'  => 'text',
+              'attributes' => [
+                'required' => 'required',
+              ]
           ],
           [
               'name'  => 'square_feet',
               'label' => trans('ihome.square_feet'),
               'type'  => 'text',
+              'attributes' => [
+                'required' => 'required',
+              ]
           ],
         ], 'both');
 

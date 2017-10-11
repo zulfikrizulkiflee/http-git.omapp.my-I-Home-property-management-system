@@ -45,7 +45,9 @@ class BlockCrudController extends CrudController
           'name'  => 'name',
           'label' => trans('ihome.name'),
           'type'  => 'text',
-
+          'attributes' => [
+            'required' => 'required',
+          ]
         ]);
 
         $this->crud->addFields([

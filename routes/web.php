@@ -25,4 +25,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
   Route::get('unit/block_with_property_id/{property_id}', function ($property_id) {
       return \App\Models\Block::where('properties_id', $property_id)->paginate();
   });
+
+  //search with the property name
+  Route::get('properties/watch/search/{name}', 'PropertiesCrudController@searchProperty');
 });
