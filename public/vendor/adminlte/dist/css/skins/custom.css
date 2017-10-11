@@ -1,6 +1,7 @@
 /*For login & register page*/
 .content-wrapper {
     background: url(https://i0.wp.com/picjumbo.com/wp-content/uploads/P1000571.jpg?w=2210&quality=50) center center no-repeat;
+    background-size: cover;
 }
 
 .main-header {
