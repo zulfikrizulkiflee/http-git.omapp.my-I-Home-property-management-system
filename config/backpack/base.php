@@ -20,6 +20,9 @@ return [
 
     // Developer or company name. Shown in footer.
     'developer_name' => 'Cristian Tabacitu',
+    
+    // Apps version. Shown in footer.
+    'version_number' => '0.1',
 
     // Developer website. Link in footer.
     'developer_link' => 'http://tabacitu.ro',
