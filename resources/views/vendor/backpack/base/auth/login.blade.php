@@ -1,5 +1,5 @@
 @extends('backpack::layout')
-<link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/skins/custom.css">
+<link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/skins/custom-auth.css">
 @section('content')
     <div class="row">
         <div class="col-md-6 col-md-offset-3 vertical-center">

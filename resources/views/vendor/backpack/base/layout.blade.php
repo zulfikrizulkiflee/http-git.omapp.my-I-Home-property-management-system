@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/skins/_all-skins.min.css">
+    <!--custom layout css-->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/skins/custom-layout.css">
     <!--For customs css in login & register, located inside login & register file-->
 
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/plugins/pace/pace.min.css">
