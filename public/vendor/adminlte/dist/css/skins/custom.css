@@ -1,0 +1,48 @@
+/*For login & register page*/
+.content-wrapper {
+    background: url(https://i0.wp.com/picjumbo.com/wp-content/uploads/P1000571.jpg?w=2210&quality=50) center center no-repeat;
+}
+
+.main-header {
+    display: none !important;
+}
+
+.main-footer {
+    display: none !important;
+}
+
+.content-wrapper {
+    margin-left: 0 !important;
+}
+
+.box {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+.box-header {
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .vertical-center {
+        padding: 0 10vh !important;
+        position: absolute !important;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+/*for mobile*/
+@media screen and (max-width: 992px) {
+    .vertical-center {
+        padding: 0 5vh !important;
+        position: absolute !important;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+/*end*/

@@ -1,8 +1,8 @@
 @extends('backpack::layout')
-
+<link rel="stylesheet" href="{{ asset('vendor/adminlte/') }}/dist/css/skins/custom.css">
 @section('content')
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 vertical-center">
             <div class="box box-default">
                 <div class="box-header with-border">
                     <div class="box-title">{{ trans('backpack::base.register') }}</div>
@@ -72,6 +72,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-user"></i> {{ trans('backpack::base.register') }}
                                 </button>
+                                <a class="btn btn-link" href="{{ url(config('backpack.base.route_prefix', 'admin').'/login') }}">Have an account?</a>
                             </div>
                         </div>
                     </form>
