@@ -53,7 +53,7 @@
         if (e.which == 13) {
             if ($('.search-input').val() != null || $('.search-input').val() != "") {
                 var search_str=$(this).val();
-                window.open("{{ url(config('backpack.base.route_prefix', 'admin').'/properties/watch/search') }}/"+search_str);
+                window.open("{{ url(config('backpack.base.route_prefix', 'admin').'/properties/watch/search') }}/"+search_str,'_self');
             }
         }
     });
