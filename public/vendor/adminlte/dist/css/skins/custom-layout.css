@@ -1,14 +1,14 @@
 .main-header .navbar{
-    background: #F44336 !important;
+    background: #F76D3C !important;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1) !important;
 }
 
 .main-header .logo{
-    background: #F44336 !important;
+    background: #F76D3C !important;
 }
 
 .main-header .sidebar-toggle:hover{
-    background: #F44336 !important;
+    background: #F76D3C !important;
 }
 
 .search-group{
@@ -44,4 +44,20 @@
 
 .search-cancel{
     cursor: pointer;
+}
+
+.btn-success{
+    border:none !important;
+    background: #1f91f3 !important;
+}
+
+input[type=text]{
+    padding-left: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input[type=text]:focus{
+    border-bottom: 2px solid #1f91f3;
 }
