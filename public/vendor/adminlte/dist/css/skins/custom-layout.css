@@ -1,63 +1,93 @@
-.main-header .navbar{
+/*Menu CSS*/
+
+.main-header .navbar {
     background: #F76D3C !important;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1) !important;
 }
 
-.main-header .logo{
+.main-header .logo {
     background: #F76D3C !important;
 }
 
-.main-header .sidebar-toggle:hover{
+.main-header .sidebar-toggle:hover {
     background: #F76D3C !important;
 }
 
-.search-group{
+.search-group {
     left: 0;
-    right:0;
+    right: 0;
     position: absolute;
     height: 100%;
 }
 
-.search-input{
+.search-input {
     padding-top: 15px;
     padding-bottom: 15px;
     height: 100%;
     border: 1px solid white;
 }
 
-.search-input:focus{
+.search-input:focus {
     border-color: white;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.search-group .input-group-addon{
+.search-group {
+    border: 1px solid white;
+}
+
+.search-group input[type=text] {
+    border: none !important;
+}
+
+.search-group input[type=text]:focus {
+    border: none !important;
+}
+
+.search-group .input-group-addon {
     border-color: white !important;
 }
 
-.search-group .search-cancel{
+.search-group .search-cancel {
     position: absolute;
     right: 0;
     z-index: 999;
     padding: 18px;
 }
 
-.search-cancel{
+.search-cancel {
     cursor: pointer;
 }
 
-.btn-success{
-    border:none !important;
+.fa-sign-out,.fa-search{
+    font-size:18px;
+}
+
+/*End Menu CSS*/
+
+
+/*Button CSS*/
+
+.btn-success {
+    border: none !important;
     background: #1f91f3 !important;
 }
 
-input[type=text]{
+input[type=text],
+input[type=email],
+input[type=password] {
     padding-left: 0;
     border-top: none;
     border-left: none;
     border-right: none;
 }
 
-input[type=text]:focus{
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
     border-bottom: 2px solid #1f91f3;
 }
+
+
+/*End Button CSS*/

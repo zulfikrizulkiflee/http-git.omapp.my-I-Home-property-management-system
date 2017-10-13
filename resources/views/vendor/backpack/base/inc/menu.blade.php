@@ -33,7 +33,7 @@
               <span class="glyphicon glyphicon-remove search-cancel" aria-hidden="true"></span>
             </div>
             <li><a class="search-icon" href="javascript:;"><i class="fa fa-btn fa-search"></i></a></li>
-            <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}"><i class="fa fa-btn fa-sign-out"></i> {{ trans('backpack::base.logout') }}</a></li>
+            <li><a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logout') }}" title="{{ trans('backpack::base.logout') }}"><i class="fa fa-btn fa-sign-out"></i></a></li>
         @endif
 
        <!-- ========== End of top menu right items ========== -->
