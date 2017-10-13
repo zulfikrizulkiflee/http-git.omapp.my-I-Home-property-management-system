@@ -38,7 +38,6 @@ class PropertiesRequest extends \Backpack\CRUD\app\Http\Requests\CrudRequest
     {
       $rules = [
           'name'    => 'required',
-          'image2222'    => 'required',
           'street' => 'required',
           'city'  => 'required',
           'state' => 'required',

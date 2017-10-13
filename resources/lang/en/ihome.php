@@ -52,6 +52,7 @@ return [
     'square_feet'           => 'Square Feet',
     'snp'                   => 'S & P',
     'image'                 => 'Image',
+    'property_search'       => "Property Search",
 
 
 ];

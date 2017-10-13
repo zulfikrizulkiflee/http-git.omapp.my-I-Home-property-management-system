@@ -118,18 +118,16 @@ class PropertiesCrudController extends CrudController
     public function searchProperty($name)
     {
       $this->data['properties'] = \App\Models\Properties::where('name', 'like', '%%'.$name.'%%')->paginate(10);
-      //dd($this->data['properties']);
+      $this->crud->hasAccessOrFail('update');
 
-      /*$this->crud->hasAccessOrFail('update');
-
-      // get the info for that entry
-      $this->data['entry'] = $this->crud->getEntry($name);
-      dd($this->data);
+      $this->crud->entity_name_plural = trans('Ihome.property_search');
       $this->data['crud'] = $this->crud;
-      $this->data['saveAction'] = $this->getSaveAction();*/
-      //$this->data['title'] = trans('backpack::crud.edit').' '.$this->crud->entity_name;
+      return view('admin/search/list', $this->data);
+    }
 
-     return view('admin/search/list', $this->data);
+    public function requestProperty($id)
+    {
+      
     }
 
 

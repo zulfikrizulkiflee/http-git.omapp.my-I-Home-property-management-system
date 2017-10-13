@@ -16,7 +16,7 @@ class Properties extends Migration
       Schema::create('properties', function (Blueprint $table) {
           $table->increments('id');
           $table->string('name')->unique();
-          $table->text('image');
+          $table->text('image')->nullable();
           $table->string('street');
           $table->string('city');
           $table->string('state');

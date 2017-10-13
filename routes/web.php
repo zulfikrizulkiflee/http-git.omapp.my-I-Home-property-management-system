@@ -28,4 +28,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
 
   //search with the property name
   Route::get('properties/watch/search/{name}', 'PropertiesCrudController@searchProperty');
+  //details with the property id
+  Route::get('properties/watch/request/{id}', 'PropertiesCrudController@requestProperty');
 });
