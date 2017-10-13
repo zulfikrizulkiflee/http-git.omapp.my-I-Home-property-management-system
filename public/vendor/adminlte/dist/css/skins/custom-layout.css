@@ -60,7 +60,7 @@
     cursor: pointer;
 }
 
-.fa-sign-out,.fa-search{
+.navbar-custom-menu .fa-sign-out,.fa-search{
     font-size:18px;
 }
 
